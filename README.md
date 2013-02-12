@@ -14,8 +14,8 @@ Clone the repository and manually invoke `composer` using the shipped
 `composer.phar`:
 
     cd my/project/dir
-    git clone git://github.com/akrabat/tasklist.git
-    cd tasklist
+    git clone git://github.com/akrabat/booklist.git
+    cd booklist
     php composer.phar self-update
     php composer.phar install
 
