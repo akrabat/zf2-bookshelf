@@ -12,5 +12,12 @@
  */
 
 return array(
-    // ...
+    'db' => array(
+        // configured in local.php
+    ),
+    'service_manager' => array(
+        'factories' => array(
+            'Zend\Db\Adapter\Adapter' => 'Zend\Db\Adapter\AdapterServiceFactory',
+        ),
+    ),
 );
