@@ -14,11 +14,13 @@
 return array(
     'db' => array(
         'driver'         => 'Pdo',
-        'dsn'            => 'mysql:dbname=booklist;hostname=lbooklistocalhost',
-        'username'       => 'rob',
-        'password'       => '123456',
-        'driver_options' => array(
-            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
-        ),
+        'dsn'      => 'sqlite:data/booklist.sqlite',
+        // or: MYSQL:
+        // 'dsn'            => 'mysql:dbname=booklist;hostname=lbooklistocalhost',
+        // 'username'       => 'rob',
+        // 'password'       => '123456',
+        // 'driver_options' => array(
+        //     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+        // ),
     ),
 );
