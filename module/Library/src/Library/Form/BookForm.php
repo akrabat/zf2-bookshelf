@@ -24,7 +24,7 @@ class BookForm extends Form
                 'type'  => 'text',
             ),
             'options' => array(
-                'label' => 'Artist',
+                'label' => 'Author',
             ),
         ));
 
