@@ -1,7 +1,7 @@
 Booklist
 ========
 
-This is a simple ZF2 application.
+This is a simple ZF2 application that uses a table gateway to manage a list of books.
 
 
 Installation
