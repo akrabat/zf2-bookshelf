@@ -13,9 +13,11 @@
 
 return array(
     'db' => array(
-        'driver'         => 'Pdo',
-        'dsn'      => 'sqlite:data/booklist.sqlite',
+        'driver'   => 'Pdo',
+        'dsn'      => 'sqlite:' . getcwd() . '/data/booklist.sqlite',
+
         // or: MYSQL:
+        // 'driver'         => 'Pdo',
         // 'dsn'            => 'mysql:dbname=booklist;hostname=lbooklistocalhost',
         // 'username'       => 'rob',
         // 'password'       => '123456',
