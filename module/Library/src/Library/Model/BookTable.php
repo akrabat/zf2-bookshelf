@@ -47,6 +47,8 @@ class BookTable extends AbstractTableGateway
         $id = (int)$book->id;
         if ($id == 0) {
             $this->insert($data);
+            $id = $this->getLastInsertValue();
+            $book->id = $id;
         } else {
             if ($this->getBook($id)) {
                 $this->update($data, array('id' => $id));
