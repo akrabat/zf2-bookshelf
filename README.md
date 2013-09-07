@@ -26,6 +26,12 @@ Database
 Copy `data/booklist.sqlite.dist` to `data/booklist.sqlite`
 
 
+Configuration
+--------
+
+Copy `config/autoload/local.php.dist` to `config/autoload/local.php`
+
+
 Virtual Host
 ------------
 
