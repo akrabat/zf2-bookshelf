@@ -27,7 +27,16 @@ class BookEntity implements InputFilterAwareInterface
 
     public function getArrayCopy()
     {
-        return get_object_vars($this);
+        return array(
+            'id'     => $this->id,
+            'author' => $this->author,
+            'title'  => $this->title,
+        );
+    }
+
+    public function toArray()
+    {
+        return $this->getArrayCopy();
     }
 
     public function setInputFilter(InputFilterInterface $inputFilter)
