@@ -1,3 +1,4 @@
+
 {
     "name": "akrabat/booklist",
     "description": "ZF2 booklist application",
@@ -6,7 +7,7 @@
         "framework",
         "zf2"
     ],
-    "homepage": "http://framework.zend.com/",
+    "homepage": "https://github.com/akrabat/booklist",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.*"
