@@ -5,7 +5,8 @@
     "license": "BSD-3-Clause",
     "keywords": [
         "framework",
-        "zf2"
+        "zf2",
+        "tutorial"
     ],
     "homepage": "https://github.com/akrabat/booklist",
     "require": {
