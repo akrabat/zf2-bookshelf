@@ -13,10 +13,7 @@
 
 return array(
     'db' => array(
-        'driver'   => 'Pdo',
-        'dsn'      => 'sqlite:' . getcwd() . '/data/booklist.sqlite',
-
-        // or: MYSQL:
+        // Uncomment to use MySQL rather than SQLite
         // 'driver'         => 'Pdo',
         // 'dsn'            => 'mysql:dbname=booklist;hostname=lbooklistocalhost',
         // 'username'       => 'rob',

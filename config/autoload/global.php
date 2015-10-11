@@ -13,7 +13,8 @@
 
 return array(
     'db' => array(
-        // configured in local.php
+        'driver'   => 'Pdo',
+        'dsn'      => 'sqlite:' . getcwd() . '/data/booklist.sqlite',
     ),
     'service_manager' => array(
         'factories' => array(
