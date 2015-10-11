@@ -68,6 +68,16 @@ class BookEntity implements InputFilterAwareInterface
                 ),
                 'validators' => array(
                     array(
+                        // customise the "required" error message
+                        'name'    => 'NotEmpty',
+                        'options' => array(
+                            'break_chain_on_failure' => true,
+                            'messages' => array(
+                                'isEmpty' => 'Title is required',
+                            ),
+                        ),
+                    ),
+                    array(
                         'name'    => 'StringLength',
                         'options' => array(
                             'encoding' => 'UTF-8',
