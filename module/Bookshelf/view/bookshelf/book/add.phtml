@@ -1,0 +1,23 @@
+<?php
+$title = 'Add new book';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title); ?></h1>
+
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('book', ['action' => 'add']));
+$form->prepare();
+?>
+
+<?= $this->form()->openTag($form) . PHP_EOL; ?>
+<?= $this->formHidden($form->get('id')) . PHP_EOL; ?>
+<div class="form-group">
+    <?= $this->formRow($form->get('title')) . PHP_EOL; ?>
+</div>
+  <div class="form-group">
+    <?= $this->formRow($form->get('author')) . PHP_EOL; ?>
+</div>
+<?= $this->formInput($form->get('submit')) . PHP_EOL; ?>
+<?= $this->form()->closeTag($form) . PHP_EOL; ?>
+

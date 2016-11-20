@@ -1,41 +1,45 @@
-Booklist
-========
+# ZF-Booklist
 
-This is a simple ZF2 application that uses a table gateway to manage a list of books.
-
-
-Installation
-------------
-
-Using Composer (recommended)
-----------------------------
-
-Clone the repository and manually invoke `composer` using the shipped
-`composer.phar`:
-
-    cd my/project/dir
-    git clone git://github.com/akrabat/booklist.git
-    cd booklist
-    php composer.phar self-update
-    php composer.phar install
+This is a simple Zend Framework application that uses a table gateway to manage
+a list of books.
 
 
-Database
---------
+## Installation
 
-Copy `data/booklist.sqlite.dist` to `data/booklist.sqlite`
+    git clone git://github.com/akrabat/zf-booklist.git
+    cd zf-booklist
+    composer install
 
-
-Configuration
---------
-
-Copy `config/autoload/local.php.dist` to `config/autoload/local.php`
+Next, copy `data/booklist.sqlite.dist` to `data/booklist.sqlite`
 
 
-Virtual Host
-------------
-
-Afterwards, set up a virtual host to point to the public/ directory of the
-project and you should be ready to go!
+## Running using PHP's built-in web server:
 
 
+```bash
+$ cd zf-booklist
+$ php -S 0.0.0.0:8080 -t public/ public/index.php
+```
+
+This will start the cli-server on port 8080, and bind it to all network
+interfaces. You can then visit the site at http://localhost:8080/
+- which will bring up Zend Framework welcome page.
+
+Alternatively, there are Vagrant and Docker configurations provided.
+
+## Development mode
+
+This application ships with [zf-development-mode](https://github.com/zfcampus/zf-development-mode)
+and provides three aliases for consuming the script it ships with:
+
+```bash
+$ composer development-enable  # enable development mode
+$ composer development-disable # disable development mode
+$ composer development-status  # whether or not development mode is enabled
+```
+
+This allows for development-only modules and bootstrap-level configuration in
+`config/development.config.php.dist`, and development-only application
+configuration in `config/autoload/development.local.php.dist`. Enabling
+development mode will copy these files to versions removing the `.dist` suffix,
+while disabling development mode will remove those copies.
